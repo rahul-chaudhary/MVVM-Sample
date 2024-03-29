@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MvvmSample" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Customize your light theme here. -->
+
+        <!-- Primary color -->
+        <item name="colorPrimary">@color/pink</item>
+
+        <!-- Accent color -->
+        <item name="colorAccent">@color/beige</item>
+
+        <!-- Background color -->
+        <item name="android:colorBackground">@color/beige</item>
+
+        <!-- Text color -->
+        <item name="android:textColorPrimary">@color/black</item>
+
+        <!-- Status bar color (optional) -->
+        <item name="android:statusBarColor">@color/beige</item>
+
+        <!-- Navigation bar color (optional) -->
+        <item name="android:navigationBarColor">@color/white</item>
+
+        <!-- Other customizations as needed -->
+
+    </style>
+
+    <style name="Theme.MvvmSample" parent="Base.Theme.MvvmSample" />
+
+    <style name="MyAppleBlueText" >
+        <item name="android:textColor">@color/blue_light</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+</resources>
