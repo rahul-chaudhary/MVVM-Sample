@@ -63,6 +63,12 @@ dependencies {
         implementation(libs.androidx.room.paging)
 
         implementation(libs.kotlinx.coroutines.android)
+        // ViewModel
+        implementation(libs.androidx.lifecycle.viewmodel.ktx)
+        // ViewModel utilities for Compose
+        implementation(libs.androidx.lifecycle.viewmodel.compose)
+        // LiveData
+        implementation(libs.androidx.lifecycle.livedata.ktx)
 
     }
 }
