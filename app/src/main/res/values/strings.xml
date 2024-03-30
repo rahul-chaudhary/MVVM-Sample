@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mvvm Sample</string>
+    <string name="insertquote">InsertQuote</string>
 </resources>
