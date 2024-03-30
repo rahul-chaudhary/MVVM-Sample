@@ -9,14 +9,14 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.mvvmsample.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
-    lateinit var mainViewModel: MainViewModel
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var mainViewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(binding.root)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val dao = QuoteDatabase.getDatabase(applicationContext).quoteDao()
+        val dao = QuoteDatabase.getDatabase(getApplicationContext()).quoteDao()
         val repository = QuoteRepository(dao)
 
         mainViewModel =
@@ -25,11 +25,12 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.getQuotes().observe(
             this
         ) {
-        binding.quotes = it.toString()
+            binding.quotes = it.toString()
         }
 
         binding.btnAddQuote.setOnClickListener {
-        val quote = Quote(0, "You know me", "GOD")
+            val quote = Quote(0, "You know me", "GOD")
+            mainViewModel.insertQuote(quote)
         }
 
     }
